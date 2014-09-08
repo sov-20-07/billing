@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Финансовый помощник</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script lang="javascript">
+        $(document).ready(function(){
+            //Скрипт работы с inputs
+            $('input[type=text]').not('.change-input').each(function(){
+                var inputVal=$(this).val();
+                $(this).attr('valueName',inputVal);
+            });
+
+            $(window).unload(function(){
+                $('input[type=text]').each(function(){
+                    $(this).val( $(this).attr('valueName'));
+
+                });
+            });
+
+
+
+            $('input[type=text]').not('.change-input').each(function() {
+                $(this).focus(function(){
+                    $(this).addClass('focus');
+                    if(this.value == $(this).attr('valueName')) {
+                        this.value = '';
+
+                    }
+                });
+                $(this).blur(function(){
+                    $(this).removeClass('focus');
+                    if( this.value == '') {
+                        this.value =$(this).attr('valueName');
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+</head>
+<body class="pop-up-body">
+<div class="pop-up">
+    <h3>Обратный звонок</h3>
+    <input type="text" class="text" value="Ваше имя" style="width: 246px"/><br/>
+    <input type="text" class="text" value="Номер телефона" style="width: 246px"/><br/>
+    <input type="button" class="send-sm-but"><span class="doted">Спасибо, не надо</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+<label><input type="checkbox" name="<?=$name?>" value="1" <?if($_GET[$name]==1):?>checked<?endif?>> <?=$title?></label><br />

@@ -1,0 +1,19 @@
+/* $iuser_filter */
+.iuser_filter_block{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: -3px 46px 10px 0;
+}
+
+.iuser_filter_header{ display: block; font-weight: bold; }
+
+.iuser_filter_inline{
+	display: inline-block;
+	vertical-align: baseline;
+	margin: 0 16px 10px 0;
+}
+
+.iuser_selection_selected{ display: inline-block; }
+.iuser_filter_block .jsSelectStyled{ display: inline-block; vertical-align: top; position: relative; margin: -2px 0 0 3px; }
+.iuser_filter_block .input_text{ padding-top: 5px; padding-bottom: 6px; }

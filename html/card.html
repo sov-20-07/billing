@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Финансовый помощник</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
+    <link href="/css/jquery-ui-1.8.23.custom.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jcarousellite.js"></script>
+    <script src="/js/highslide-full.js" type="text/javascript"></script>
+    <link href="/css/highslide.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
+    <script src="/js/perfectpixel.js" type="text/javascript"></script>
+    <script src="/js/common.js" type="text/javascript"></script>
+    <script lang="javascript">
+
+        $(document).ready(function(){
+            perfectPixel('/layouts/card.jpg');
+        });
+    </script>
+
+
+    <!-- ========== web-weatures.net Paralax Background ================= -->
+    <script type="text/javascript">
+        var wf_pbb_object = [
+            {bc:"transparent"},
+            {img:"/i/stars-bg.png", mm:true, ms:false, mms:1, mss:10, mmd:1, mso:"v", msd:1, im:"pattern", pr:"x", mma:"both", ofs:{x:0, y:50}, zi:2, sr:false, sb:false, isr:false, isb:false},
+            {img:"/i/planets.png", mm:false, ms:true, mms:1, mss:10, mmd:-1, mso:"v", msd:1, im:"image", pr:"both", mma:"both", ofs:{x:0, y:200}, zi:3, sr:false, sb:false, isr:false, isb:false}
+        ];
+    </script>
+    <script type="text/javascript" src="http://web-features.net/api/wf.pbb.api.js"></script>
+    <!-- ========== web-weatures.net Paralax Background ================= -->
+    <script>
+        $(window).load(function() {
+
+
+            $("#mcs2_container").mCustomScrollbar("vertical",0,"easeOutCirc",1.05,"auto","yes");
+
+        });
+    </script>
+    <script src="/js/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript">
+        langu="";
+        hs.graphicsDir = "/js/graphics/";
+        hs.outlineType = "rounded-white";
+        hs.wrapperClassName = "draggable-header";
+        hs.dimmingOpacity = 0.80;
+        hs.align = "center";
+
+
+        $(document).ready(function(){
+            $(".pop_img").each(function(){
+                this.parentNode.className="highslide";
+                $(this.parentNode).click(function(){
+                    return hs.expand(this,
+                            {wrapperClassName: 'borderless floating-caption',
+                                dimmingOpacity: 0.75,
+                                minHeight: 1200,
+                                align: 'center'})
+                });
+
+            });
+        })
+    </script>
+
+</head>
+<body class="body">
+<div id="wrapper">
+
+
+<div class="head-menu">
+    <div class="wrap">
+        <ul class="menu">
+            <li>
+                <a href="#" class="active"> <span class="light">О компании<span class="light-right"></span></span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="light">Оплата<span class="light-right"></span></span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="light">Доставка<span class="light-right"></span></span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="light">Оптовикам<span class="light-right"></span></span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="light">Контактная информация<span class="light-right"></span></span></a>
+            </li>
+        </ul>
+
+        <div class="pickup">
+            <div class="pop-up-box">
+                <span class="pop-name">Пункт самовывоза</span>
+                <div class="pop-box to-close" style="width: 188px;">
+
+                    м. Багратионовская,<br/>
+                    ТЦ «Горбушка», павильон 320<br/>
+                    Ждём вас с 10:00 до 20:00<br/>
+                    <a href="#">Посмотреть схему проезда</a>
+                </div>
+            </div>
+
+            <span>&nbsp;&nbsp;Ждём вас с 10:00 до 20:00</span>
+
+        </div>
+
+
+    </div>
+</div>
+<div class="head">
+    <div class="wrap">
+        <a href="/" class="logo">DVR-group</a>
+        <div class="phone-box">
+            <span class="phone">+7 (495) 789-28-68</span><br/>
+
+            <span class="doted">обратный звонок</span><br/>
+
+                    <span class="grey">
+                        Консультация и приём заказов <br/>
+                        по телефону с 9:00 до 21:00
+                    </span>
+        </div>
+        <div class="basket">
+            <div class="open-basket-list">
+                <span class="none">Корзина пуста</span>
+                <span class="full">Ваша корзина</span>
+            </div>
+                    <span class="full-text">
+                        <a href="#">оформить заказ</a><br/>
+                        Выбранных товаров: <span>3</span>
+                    </span>
+            <span class="none-text">Космическия обезьяна<br/> недовольна пустой<br/> корзиной!</span>
+
+            <div class="basket-list">
+                <div class="scroll-product">
+                    <div class="grad"></div>
+                    <div id="mcs2_container">
+                        <div class="customScrollBox">
+                            <div class="container">
+                                <div class="content">
+                                    <ul class="basket-product-list">
+                                        <li>
+                                            <a href="#">AvtoVision ALFA</a>
+                                            <span class="price">2000<span class="rub">a</span></span>
+                                        </li>
+                                        <li >
+                                            <a href="#">Street Storm STR-6010 (Dark brown)</a>
+                                            <span class="price">2000<span class="rub">a</span></span>
+                                        </li>
+                                        <li>
+                                            <a href="#">AvtoVision ALFA</a>
+                                            <span class="price">2000<span class="rub">a</span></span>
+                                        </li>
+                                        <li >
+                                            <a href="#">Street Storm STR-6010 (Dark brown)</a>
+                                            <span class="price">2000<span class="rub">a</span></span>
+                                        </li>
+                                        <li >
+                                            <a href="#">Street Storm STR-6010 (Dark brown)</a>
+                                            <span class="price">2000<span class="rub">a</span></span>
+                                        </li>
+                                        <li >
+                                            <a href="#">Street Storm STR-6010 (Dark brown)</a>
+                                            <span class="price">2000<span class="rub">a</span></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dragger_container">
+                                <div class="dragger"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="checkout-sm-but"></span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="top-menu">
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href ="#">
+                             <span class="border">
+                              <span class="light"> Видеорегистраторы<span class="light-right"></span></span>
+                             </span>
+                </a>
+                <span class="hover"></span>
+            </li>
+            <li>
+                <a href ="#" class="active">
+                          <span class="border">
+                            <span class="light">Антирадары<span class="light-right"></span></span>
+                          </span>
+                </a>
+                <span class="hover"></span>
+            </li>
+            <li>
+                <a href ="#">
+                             <span class="border">
+                           <span class="light"> GPS навигаторы<span class="light-right"></span></span>
+                             </span>
+                </a>
+                <span class="hover"></span>
+            </li>
+            <li>
+                <a href ="#">
+                             <span class="border">
+                               <span class="light">Игровые приставки<span class="light-right"></span></span>
+                             </span>
+                </a>
+                <span class="hover"></span>
+            </li>
+            <li>
+                <a href ="#">
+                             <span class="border">
+                            <span class="light"> Аксессуары<span class="light-right"></span></span>
+                         </span></a>
+                <span class="hover"></span>
+            </li>
+        </ul>
+        <div class="more">
+
+            <div class="more-box">
+                <div class="top"></div>
+                <a href="#">Антистрелки</a>
+                <a href="#">Расходные материалы</a>
+                <a href="#">Ещё что-нибудь</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="content">
+    <div class="breadcrumbs">
+        <a class="home" href="/"></a>
+        <span>></span>
+        <a href="/catalog/">Каталог</a>
+        <span>></span>
+        <span>Антирадары</span>
+    </div>
+    <div class="card" id="up">
+        <div class="left-coll">
+            <div class="photo">
+                <div class="product-carousel">
+                    <div class="bip-pic" style="margin-top: -16px;">
+                        <a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/big-pr.png" alt="sdfsdf" /></a>
+                    </div>
+
+                    <div class="carousel">
+
+                        <ul>
+                            <li><a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/car-sm.png" alt="Монитор" ></a></li>
+                            <li><a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/car-sm.png" alt="Монитор2" ></a></li>
+                            <li><a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/car-sm.png" alt="Монитор3" ></a></li>
+                            <li><a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/car-sm.png" alt="Монитор3" ></a></li>
+                            <li><a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/car-sm.png" alt="Монитор3" ></a></li>
+                            <li><a href="/i/temppic/big-pr.png" title="" onclick="return hs.expand(this,galleryOptions)"><img src="/i/temppic/car-sm.png" alt="Монитор3" ></a></li>
+
+
+
+                        </ul>
+                        <span class="prev_pr disabled"></span>
+                        <span class="next_pr"></span>
+                    </div>
+
+                </div>
+                <script type="text/javascript">
+                    var galleryOptions = {
+                        slideshowGroup: 1,
+                        outlineType: 'rounded-white',
+                        wrapperClassName: 'projects_gallery',
+                        dimmingOpacity: 0.7,
+                        align: 'center',
+                        transitions: ['expand', 'crossfade'],
+                        fadeInOut: true,
+                        marginLeft: 100,
+                        marginBottom: 0,
+                        captionEval: 'this.thumb.alt',
+                        useBox: true,
+                        width: 734,
+                        height: 512
+                    };
+                    hs.addSlideshow({
+                        slideshowGroup: 1,
+                        interval: 5000,
+                        repeat: true,
+                        useControls: true,
+                        overlayOptions: {
+                            thumbnailId: 'art1gallary',
+                            className: 'text-controls',
+                            relativeTo: 'highslide-wrapper',
+                            offsetY: "50%"
+                        },
+                        thumbstrip: {
+                            thumbnailId: 'art1gallary',
+                            position: 'bottom center',
+                            mode: 'horizontal',
+                            relativeTo: 'highslide-wrapper',
+                            offsetY: 170
+                        }
+                    });
+                    // not dragged
+                    hs.Expander.prototype.onDrag = function() {
+                        return false;
+                    };
+                    // Keep the position after window resize
+                    hs.addEventListener(window, 'resize', function() {
+                        var i, exp;
+                        hs.page = hs.getPageSize();
+                        for (i = 0; i < hs.expanders.length; i++) {
+                            exp = hs.expanders[i];
+                            if (exp) {
+                                var x = exp.x,
+                                        y = exp.y;
+                                // get new thumb positions
+                                exp.tpos = hs.getPosition(exp.el);
+                                x.calcThumb();
+                                y.calcThumb();
+                                // calculate new popup position
+                                x.pos = x.tpos - x.cb + x.tb;
+                                x.scroll = hs.page.scrollLeft;
+                                x.clientSize = hs.page.width;
+                                y.pos = y.tpos - y.cb + y.tb;
+                                y.scroll = hs.page.scrollTop;
+                                y.clientSize = hs.page.height;
+                                exp.justify(x, true);
+                                exp.justify(y, true);
+                                // set new left and top to wrapper and outline
+                                exp.moveTo(x.pos, y.pos);
+                            }
+                        }
+                    });
+                    var ovn=0;
+                    hs.Expander.prototype.onCreateOverlay=function(){	}
+                </script>
+            </div>
+            <div class="annotation-card">
+                <h1>Stinger RX-95U ST АНТИСРЕЛКА</h1>
+                <span class="hit"></span>
+                <span class="rst"></span>
+                <span class="new"></span>
+                <span class="stars st2"></span>
+                <a href="#tabs" onclick="$('#tabs').tabs('select','#comment')"><span class="doted" style="margin-right: 3px;">Отзывы</span></a><span class="grey">(2)</span>
+                <div class="availability">
+                   <!-- <span class="green">Осталось на складе: 5</span>-->
+                    <span class="grey bold" style="margin-right: 15px;">Нет на складе</span><span class="doted">Сообщить о поступлении</span>
+
+                </div>
+                <p>Вооружившись профессиональным радар-детектором «Stinger» вы заблаговременно получите сигнал о приближении к участку дороги, на котором осуществляется контроль скоростного режима. Вовремя снизив скорость, вы избежите штрафов и обезопасите себя, своих пассажиров, пешеходов и других участников дорожного движения.</p>
+                <div class="button-bar">
+                    <a href="#tabs" class="properties" onclick="$('#tabs').tabs('select','#tabs-1')"><span class="doted">особенности</span></a>
+                    <a href="#tabs"  class="features" onclick="$('#tabs').tabs('select','#tabs-2')"><span class="doted">характеристики</span></a>
+                    <a href="#tabs"  class="equipment" onclick="$('#tabs').tabs('select','#tabs-3')"><span class="doted">комплектация</span></a>
+                </div>
+            </div>
+        <div class="clear"></div>
+        <div class="hr" style="margin-top: 23px;margin-bottom: 17px;"></div>
+            <h3>С этим товаром покупают</h3>
+            <table class="v-top">
+                <tr>
+                    <td>
+                        <div class="product sm">
+                            <div class="annotation">
+                                <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                                <a href="#" class="name">
+                                    Street
+                                </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                            </div>
+                            <div class="hover">
+                                <div class="buttons">
+                                    <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                    <span class="buy-sm-but"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product sm">
+                            <div class="annotation">
+                                <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                                <a href="#" class="name">
+                                    Street
+                                </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                            </div>
+                            <div class="hover">
+                                <div class="buttons">
+                                    <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                    <span class="buy-sm-but"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="product sm">
+                            <div class="annotation">
+                                <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                                <a href="#" class="name">
+                                    Street
+                                </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                            </div>
+                            <div class="hover">
+                                <div class="buttons">
+                                    <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                    <span class="buy-sm-but"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="hr" style="margin-top: 12px;margin-bottom: 16px;"></div>
+            <h3>Подробное описание</h3>
+            <div class="detailed-description">
+                <div id="tabs" style="margin-top: 14px;">
+                    <ul>
+                        <li class="to-click"><a href="#tabs-1">Функции и особенности</a></li>
+                        <li class="to-click"><a href="#tabs-2">Характеристики</a></li>
+                        <li class="to-click"><a href="#tabs-3">Комплектация</a></li>
+                        <li class="to-click"><a href="#tabs-4">Видео-обзор</a></li>
+                        <li class="to-click"><a href="#comment">Отзывы</a></li>
+
+                    </ul>
+                    <div id="tabs-1">
+                        <p>Цифровой спутниковый приёмник стандартного разрешения GLOBO X80 предназначен для просмотра телепрограмм пакета «Телекарта» в кодировке системы условного доступа СОNАХ и любых не кодированных телепрограмм (FTA).
+                        </p>
+                    </div>
+                    <div id="tabs-2">
+                        <p>
+                            Morbi tincidunt, dui sit amet facilisis feugiat, odio
+                            metus gravida ante, ut pharetra massa metus id nunc.
+                            Duis scelerisque molestie turpis. Sed fringilla, massa
+                            eget luctus malesuada, metus eros molestie lectus, ut
+                            tempus eros massa ut dolor. Aenean aliquet fringilla sem.
+                            Suspendisse sed ligula in ligula suscipit aliquam.
+                            Praesent in eros vestibulum mi adipiscing adipiscing.
+                            Morbi facilisis. Curabitur ornare consequat nunc.
+                            Aenean vel metus. Ut posuere viverra nulla. Aliquam erat
+                            volutpat. Pellentesque convallis. Maecenas feugiat,
+                            tellus pellentesque pretium posuere, felis lorem euismod
+                            felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.
+                        </p>
+                    </div>
+                    <div id="tabs-3">
+                        <p>
+                            Mauris eleifend est et turpis. Duis id erat. Suspendisse
+                            potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque
+                            rutrum erat, eu congue orci lorem eget lorem. Vestibulum non
+                            ante. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos. Fusce sodales.
+                            Quisque eu urna vel enim commodo pellentesque. Praesent
+                            eu risus hendrerit ligula tempus pretium. Curabitur lorem
+                            enim, pretium nec, feugiat nec, luctus a, lacus.
+                        </p>
+                        <p>
+                            Duis cursus. Maecenas ligula eros, blandit nec, pharetra at,
+                            semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra
+                            justo vitae neque. Praesent blandit adipiscing velit. Suspendisse
+                            potenti.
+                        </p>
+                    </div>
+                    <div id="tabs-4">
+                        <p>
+                            Mauris eleifend est et turpis. Duis id erat. Suspendisse
+                            potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque
+                            rutrum erat, eu congue orci lorem eget lorem. Vestibulum non
+                            ante. Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos. Fusce sodales.
+                            Quisque eu urna vel enim commodo pellentesque. Praesent
+                            eu risus hendrerit ligula tempus pretium. Curabitur lorem
+                            enim, pretium nec, feugiat nec, luctus a, lacus.
+                        </p>
+                        <p>
+                            Duis cursus. Maecenas ligula eros, blandit nec, pharetra at,
+                            semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra
+                            justo vitae neque. Praesent blandit adipiscing velit. Suspendisse
+                            potenti.
+                        </p>
+                    </div>
+                    <div id="comment">
+                        <p>
+                            comment
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="hr" style="margin-bottom: 16px;"></div>
+            <h3>Схожие предложения</h3>
+            <table class="catalog-list">
+                <tr>
+                    <td>
+                        <div class="product">
+                            <div class="annotation">
+                                <a class="pic" href="#" style="background-image: url('/i/temppic/pr.png')"></a>
+                                <a href="#" class="name">
+                                    AvtoVision Delta PLUS
+                                </a>
+                                <span class="price">8 000<span class="rub">a</span> </span>
+                            </div>
+                            <div class="hover">
+                                <div class="buttons">
+                                    <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                    <span class="buy-sm-but" onclick="addProductInToBasket(' Street Storm STR-6010 (Dark brown) ','http://ya.ru','8 000')"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="sep">
+
+                    </td>
+                    <td>
+                        <div class="product">
+                            <div class="annotation">
+                                <a class="pic" href="#" style="background-image: url('/i/temppic/pr.png')"></a>
+                                <a href="#" class="name">
+                                    Street Storm STR-6010 (Dark brown) Street Storm STR-6010 (Dark brown)
+                                </a>
+                                <span class="price">8 000<span class="rub">a</span> </span>
+                            </div>
+                            <div class="hover">
+                                <div class="buttons">
+                                    <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                    <span class="buy-sm-but" onclick="addProductInToBasket(' Street Storm STR-6010 (Dark brown) ','http://ya.ru','8 000')"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td  class="sep">
+
+                    </td>
+                    <td>
+                        <div class="product">
+                            <div class="annotation">
+                                <a class="pic" href="#" style="background-image: url('/i/temppic/pr.png')"></a>
+                                <a href="#" class="name">
+                                    Street Storm STR-6010 (Dark brown) Street Storm STR-6010 (Dark brown)
+                                </a>
+                                <span class="price">8 000<span class="rub">a</span> </span>
+                            </div>
+                            <div class="hover">
+                                <div class="buttons">
+                                    <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                    <span class="buy-sm-but" onclick="addProductInToBasket(' Street Storm STR-6010 (Dark brown) ','http://ya.ru','8 000')"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="right-coll">
+
+            <div class="fixed-block">
+                <div class="buy-block">
+                    <span class="price">7 190<span class="rub" style="font-size: 28px">a</span></span><br/>
+                    <span class="in-basket-but" onclick="addProductInToBasket('Stinger RX-95U ST АНТИСРЕЛКА','http://ya.ru','7 190')"></span><br/>
+                    <img src="/i/visa.png" />
+                </div>
+                <div class="one-click">
+                    <h3>Купить в один клик</h3>
+                    <span class="grey">Менеджер перезвонит вам, узнает все детали и сам оформит заказ на ваше имя.</span><br/>
+                    <div class="call"> <input type="text" class="text"><input type="button" class="order-but"></div>
+
+                </div>
+                <div class="white-block">
+                    <span class="rocket">Заказы стоимостью свыше
+                            4 000 руб — в пределах
+                            МКАД БЕСПЛАТНО!
+                    </span>
+                    <span class="shield">
+                        Качество товаров соответствует стандартам, установленным
+                        на территории РФ
+                    </span>
+                </div>
+                <div class="up">
+                    <a class="up-but" href="#up"></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="hr" style="margin-bottom: 16px;"></div>
+        <h3>Просмотренные</h3>
+        <table class="v-top">
+            <tr>
+                <td>
+                    <div class="product sm">
+                        <div class="annotation">
+                            <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                            <a href="#" class="name">
+                                Street
+                            </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                        </div>
+                        <div class="hover">
+                            <div class="buttons">
+                                <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                <span class="buy-sm-but"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product sm">
+                        <div class="annotation">
+                            <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                            <a href="#" class="name">
+                                Street
+                            </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                        </div>
+                        <div class="hover">
+                            <div class="buttons">
+                                <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                <span class="buy-sm-but"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product sm">
+                        <div class="annotation">
+                            <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                            <a href="#" class="name">
+                                Street
+                            </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                        </div>
+                        <div class="hover">
+                            <div class="buttons">
+                                <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                <span class="buy-sm-but"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="product sm">
+                        <div class="annotation">
+                            <a class="pic" href="#" style="background-image: url('/i/temppic/pr_sm.png')"></a>
+                            <a href="#" class="name">
+                                Street
+                            </a><br/>
+                                <span class="price">8 000<span class="rub">a</span><br/>
+                                     <span class="sale">скидка 800 <span class="rub">a</span></span>
+                                </span>
+                        </div>
+                        <div class="hover">
+                            <div class="buttons">
+                                <span class="stars st1"></span><a href="#">Отзывы</a><span>(2)</span>
+                                <span class="buy-sm-but"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="empty"></div>
+<div id="footer">
+    <div class="footer-content">
+        <div class="left-coll">
+            &copy; 2012 «DVR group»<br/>
+            <span class="rub">a</span>—все цены указаны в рублях
+        </div>
+        <div class="center">
+            <div class="box">
+                <img src="/i/temppic/ya.png" />
+            </div>
+            <div class="box">
+                <img src="/i/temppic/visa.png" />
+            </div>
+            <div class="box">
+                <img src="/i/temppic/soc.png" />
+            </div>
+        </div>
+        <div class="right-coll">
+            <a href="#">Разработка сайта</a>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

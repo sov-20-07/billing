@@ -1,0 +1,68 @@
+#wrapper{
+	background: none !important;
+}
+
+#footer .footer-container{
+	height: 130px;
+	width: 100%;
+	background: #fff;
+}
+
+.footer-content{
+}
+
+#footer, #empty{
+	height: 948px !important;
+}
+
+#wrapper .bg{
+	background: #fff;
+}
+
+
+#monkey, #monkey_transp{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	min-width: 980px;
+	height: 818px;
+}
+
+#monkey{
+	z-index: -1000;
+	background: url('/i/monkey/monkey_bkg.jpg') center no-repeat;
+}
+
+#monkey_transp{
+	position: absolute;
+	z-index: 1;
+	background: url('/i/monkey/monkey_transparent.png') center no-repeat;
+}
+
+#playsound{
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	cursor: pointer;
+	margin-left: -50px;
+	display: block;
+	width: 100px;
+	height: 100px;
+	text-decoration: none;
+}
+
+.monkey_lhand, .monkey_rhand{
+	top: 15px;
+	width: 110px;
+	height: 136px;
+}
+
+.monkey_lhand{
+	background: url('/i/monkey/right_hand.png') center no-repeat;
+	left: -89px;
+}
+
+.monkey_rhand{
+	background: url('/i/monkey/left_hand.png') center no-repeat;
+	right: -89px;
+}

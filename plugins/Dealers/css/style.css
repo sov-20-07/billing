@@ -1,0 +1,140 @@
+.plugin_dealers_search{margin: 0 0 20px;}
+.plugin_dealers_search .input_text{ margin: 0 0 0 10px; }
+
+.plugin_dealers_table_goods{ width: 100%; margin: 20px 0; }
+.plugin_dealers_table_goods th{ text-align: left; font-weight: bold; }
+
+.plugin_dealers_table_goods th{ padding: 5px 10px; font-size: 12px; color: #999; }
+.plugin_dealers_table_goods td{ vertical-align: middle; padding: 10px; border: 1px solid #d2d2d2; }
+.plugin_dealers_table_img{ text-align: center; }
+.plugin_dealers_table_img img{ display: block; margin: 0 auto; }
+
+.plugin_dealers_table_goods_result-row td:first-child{ text-align: right; }
+.plugin_dealers_table_goods_result-row td{ border: 0; }
+
+.plugin_dealers_custom-table{ margin: 10px 0 20px; }
+.plugin_dealers_custom-table td{ padding-top: 12px !important; padding-bottom: 12px; }
+.plugin_dealers_custom-table .input_text{ position: relative; margin-top: -8px; margin-bottom: -8px; }
+
+.plugin_dealers_buttons-after-name{
+	display: inline-block;
+	height: 0;
+	position: relative;
+	margin: -11px 0;
+}
+.plugin_dealers_buttons-after-name .button-white{ vertical-align: middle; position: relative; top: -2px; }
+.plugin_dealers_user-link + .plugin_dealers_buttons-after-name{ margin-left: 10px; }
+
+.plugin_dealers_info{ padding-top: 20px; }
+
+.plugin_dealers_icheck-inner{ margin: 0 0 10px 20px; position: relative; }
+
+.plugin_dealers_custom-table .form_label{ margin: 0 0 10px; }
+.plugin_dealers_icheck-inner .form_label{ margin: 0 0 5px; }
+
+.form_label_additional-text{
+	font-size: 12px; line-height: 1.5;
+	color: #999;
+	position: relative;
+	padding: 0 0 0 22px;
+	top: -10px;
+}
+
+.plugin_dealers_table_goods .jsOrdersNewSelectStyled{ min-width: 50px; margin: 0; }
+
+.plugin_dealers_users-list table{ width: 100%; }
+.plugin_dealers_users-list th,
+.plugin_dealers_users-list td{
+	padding: 5px 0 5px 10px;
+	text-align: left;
+	word-wrap: break-word;
+	vertical-align: middle;
+}
+.plugin_dealers_users-list th:first-child,
+.plugin_dealers_users-list td:first-child{ padding-left: 0; }
+
+.plugin_dealers_users-list th{
+	font-size: 0.857em;
+	padding-top: 0;
+	color: #999;
+}
+
+.plugin_dealers_users-filter{ padding: 15px 20px 20px; position: relative; }
+.plugin_dealers_users-filter_header{
+	position: absolute; top: 15px; left: 20px;
+	font-weight: bold;
+}
+.plugin_dealers_users-filter_content{ padding: 0 0 0 100px; }
+
+.plugin_dealers_users-filter_group,
+.plugin_dealers_users-filter_search{
+	display: inline-block; vertical-align: top;
+}
+
+.plugin_dealers_users-filter_reset{ position: absolute; top: 46px; left: 20px; }
+
+.plugin_dealers_users-filter_group{ float: none;	padding: 0 16px 0 0; }
+.plugin_dealers_users-filter_group .cusel{ width: 100px !important; margin: 0; }
+.plugin_dealers_users-filter_search .input_text{ width: 140px; margin: 0 3px 0 0; }
+.plugin_dealers_users-filter_search .button-white{ position: relative; top: 2px; }
+
+.plugin_dealers_users-filter_header2{ padding: 0 0 5px; }
+
+.plugin_dealers_orders_head {
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+	.plugin_dealers_buttons-after-name{
+		display: block; margin: 10px 0 20px !important;
+	}
+}
+
+
+/* $neworder */
+.neworder_aside{
+	margin: 20px 0 20px 20px;
+	padding: 20px;
+	background: #eee;
+	border: 1px solid #ccc;
+}
+
+.neworder_aside .order_previews_list{ margin: -10px 0 0; }
+.neworder_aside .order_previews_item{ padding: 8px 0 10px; }
+.neworder_aside .order_dl_label{ width: 50%; vertical-align: bottom; }
+.neworder_aside .order_dl_value{ vertical-align: bottom; }
+.neworder_submit{
+	padding: 20px 0 0;
+	text-align: center;
+}
+
+.neworder_list .neworder_list{ display: none; }
+
+.neworder_header{
+	padding: 10px 20px 10px 40px;
+	position: relative;
+	border: 1px solid #ccc;
+	margin: 0 0 -1px;
+	font-weight: bold;
+}
+.neworder_header_text{ position: relative; display: block; }
+	.neworder_header_text:before{
+		content: '+';
+		display: block;
+		width: 20px; height: 20px;
+		position: absolute;
+		top: 50%; left: -30px;
+		margin: -10px 0 0;
+		background: #999;
+		color: #fff;
+		text-align: center;
+	}
+	.neworder_header:hover .neworder_header_text:before{ background: #666; }
+	.neworder_header_opened .neworder_header_text:before{ content: '-'; }
+	
+.neworder_header:hover{ cursor: pointer; background: #eee; }
+
+.account_history-table{ width: 100%; }
+.account_history-table th{ text-align: left; color: #999; }
+.account_history-table th,
+.account_history-table td{ padding: 10px; border: 1px solid #ccc; }

@@ -1,0 +1,47 @@
+/*.hspopup_content{ padding: 24px; }
+.hspopup_header{ font-size: 2em; padding: 0 0 10px; }
+
+.hspopup_content .jsScrollContainer{ border: 1px solid #dde0d3; margin: 0 0 10px; height: 400px; }
+.hspopup_content .jspCapTop, .hspopup_content .jspCapBottom{ width: 7px; height: 13px; display: block; background: #fff; }
+.hspopup_content .jspVerticalBar{ right: 7px; } 
+.hspopup_content .jspVerticalBar:before{ content: ''; display: block; height: 100%; width: 7px; position: absolute; top: 0; right: -7px; background: #fff; }
+
+.hspopup_close{
+	background: url("../i/icons.png") -53px -85px;
+    display: block;
+    height: 11px; width: 11px;
+    position: absolute; top: 10px; right: 10px;
+    cursor: pointer;
+}
+	.hspopup_close:hover{ opacity: 0.5; }
+*/
+
+/* $treeselect */
+.treeselect_list{ padding: 6px 0 10px; overflow: hidden; clear: both; }
+.treeselect_list .treeselect_list{ padding-left: 10px; }
+.treeselect_item{ overflow: hidden; padding: 0 0 6px; }
+.treeselect_branch_toggle_hover{ color: #4f6700; cursor: pointer; }
+.treeselect_branch_toggle_hover:hover{ color: #a6bd2d; }
+.treeselect_branch_toggle_hover:active{ color: #7da100; }
+.treeselect_branch_header{ overflow: hidden; } 
+
+/* $highslide */
+.highslide-footer, .highslide-header{ display: none !important; }
+
+/* NEW */
+.hspopup_body{ width: 100%; height: 100%; }
+.hspopup_header{ font-size: 1.5em; line-height: 1.2; padding: 20px; position: relative; }
+.hspopup_scroll_content{ padding: 20px 20px 0; }
+.hspopup_scroll_layout{ border-top: 1px solid #dde0d3; }
+.hspopup_form_buttons{ text-align: center; padding: 0 0 30px; }
+.hspopup_close{
+	position: absolute; top: 10px; right: 10px;
+	background: url("../i/icons.png") -53px -86px;
+	display: block; width: 10px; height: 10px;
+	cursor: pointer;
+}
+	.hspopup_close:hover{ opacity: .5; }
+	
+.hspopup_buttons{ padding: 20px; }
+.hspopup_buttons .displayed-quantity{ padding: 0; float: none; }
+.hspopup_buttons .button-white{ margin: 0 10px 0 0; }

@@ -1,0 +1,1 @@
+<?=Funcs::$infoblock['payment'][$_SESSION['mydata']['payment']]['name']?>

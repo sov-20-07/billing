@@ -1,0 +1,33 @@
+<?
+class NewsController extends Site{
+	function __construct(){
+		if($_POST){
+			DB::escapePost();
+			News::setSubscribers();
+			if($_SERVER['HTTP_REFERER']){
+				$this->redirect($_SERVER['HTTP_REFERER']);
+			}else{
+				$this->redirect('/media/news/');
+			}
+		}else{
+			$tree=Tree::getTreeByUrl('wide');
+			Funcs::setMeta($tree);
+			if(Funcs::$uri[2]==''){
+				$tree['pic']=$tree['fields']['files_gal1'][0]['path'];
+				$tree['list']=News::getList($tree['id']);
+				//$tree['tags']=News::getTagList($tree['id']);
+				View::render('news/list',$tree);
+			}else{
+				//$tree['tags']=News::getTags($tree['id']);
+				$tree['next']=News::getNext($tree['id'],$tree['parent'],$tree['udate']);
+				$tree['prev']=News::getPrev($tree['id'],$tree['parent'],$tree['udate']);
+				if(isset($_GET['print'])){
+					View::render('news/print',$tree);
+				}else{
+					View::render('news/one',$tree);
+				}
+			}
+		}
+	}
+}
+?>

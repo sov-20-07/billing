@@ -1,0 +1,3 @@
+<?foreach(Fields::getFeaturesGroups() as $item):?>
+	<li class="features_group_item" id="groupFeatures<?=$item['id']?>"><?=$item['name']?> (<?=$item['path']?>) <a title="Редактировать" class="icon_edit" href="javascript:;" onclick="showeditFeaturesGroup(<?=$item['id']?>,'<?=$item['name']?>','<?=$item['path']?>')"></a> <a title="Удалить" class="icon_remove" href="javascript:;" onclick="delFeaturesGroup(<?=$item['id']?>)"></a></li>
+<?endforeach?>

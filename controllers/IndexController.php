@@ -1,0 +1,78 @@
+<?
+class IndexController extends Site{
+	function __construct(){
+		if(Funcs::$uri[0]==''){
+			$tree=Tree::getTreeByUrl('wide');
+			Funcs::setMeta($tree);
+			//$tree['hits']=Index::getHits();
+			//$tree['mainbanner']=Index::getMainBanner();
+			//$id=Tree::getIdTreeByModule('news');
+			//$tree['news']=News::getList($id,2);
+			//$tree['banners']=Index::getBanners();
+			/*$tree['about']=Fields::getFieldsByTree(8,'wide');
+			$tree['examples']=Index::getExamples();
+			$tree['forum']=Forum::getIndex();*/
+			View::render('site/index',$tree);
+		}elseif(Funcs::$uri[0]=='sitemap'){
+			//$tree=Tree::getTreeByUrl('wide');
+			//Funcs::setMeta($tree);
+			$model=new Tree;
+			$tree['sitemap']=$model->getSitemap();
+			View::render('site/sitemap',$tree);
+		}elseif(Funcs::$uri[0]=='rss'){
+			View::$layout="empty";
+			View::render('news/rss',News::getRSS());
+		}elseif(Funcs::$uri[0]=='contacts' && Funcs::$uri[1]==''){
+			$tree=Tree::getTreeByUrl('wide');
+			Funcs::setMeta($tree);
+			View::render('site/contacts',$tree);
+		}elseif(Funcs::$uri[0]=='viewed'){
+			$tree=Tree::getTreeByUrl('wide');
+			Funcs::setMeta($tree);
+			$tree['list']=Catalog::getViewed();
+			$tree['recommended']=Catalog::getRecommended();
+			View::render('favorite/viewed',$tree);
+		}elseif(Funcs::$uri[0]=='customer' && Funcs::$uri[1]=='partners' && Funcs::$uri[2]=='anketa' && Funcs::$uri[3]==''){
+			$tree=Tree::getTreeByUrl('wide');
+			Funcs::setMeta($tree);
+			View::render('site/anketa',$tree);
+		}else{
+			$tree=Tree::getTreeByUrl();
+			Funcs::setMeta($tree);
+			if($tree['info']['type']=='spage'){
+				$class=strtoupper(substr($tree['info']['path'],0,1)).substr($tree['info']['path'],1,strlen($tree['info']['path']));
+				if(class_exists($class)){
+					if($tree['info']['id2']==0){
+						eval('$tree[\'list\']='.$class.'::getList($tree[\'id\']);');
+						View::render($tree['info']['path'].'/list',$tree);
+					}else{
+						eval('$tree[\'fields\']='.$class.'::getOne($tree[\'id\']);');
+						if(isset($_GET['print'])){
+							View::$layout='empty';
+							View::render($tree['info']['path'].'/print',$tree);
+						}else{
+							View::render($tree['info']['path'].'/one',$tree);
+						}
+					}
+				}else{
+					if($tree['info']['id2']==0){
+						$tree['list']=Spage::getList($tree['id']);
+						View::render($tree['info']['path'].'/list',$tree);
+					}else{
+						$tree['fields']=Spage::getOne($tree['id']);
+						if(isset($_GET['print'])){
+							View::$layout='empty';
+							View::render($tree['info']['path'].'/print',$tree);
+						}else{
+							View::render($tree['info']['path'].'/one',$tree);
+						}
+					}
+				}
+				
+			}else{
+				View::render('site/page',$tree);
+			}
+		}
+	}
+}
+?>

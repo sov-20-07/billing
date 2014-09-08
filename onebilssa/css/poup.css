@@ -1,0 +1,45 @@
+.alert_box{ display: none; position: fixed; left: 0; top: 0; z-index: 997; width: 100%; height: 100%; }
+.alert_box .alert_box_transparent_layer { 
+	width: 100%; height: 100%; background: #000; 
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60); /* IE 5.5+*/
+	-moz-opacity: 0.6; 
+	-khtml-opacity: 0.6; 
+	opacity: 0.6;
+	position: absolute;
+	left: 0;
+	z-index: 998;
+}
+.alert_box .alert_box_window { 
+	width: 200px; height: 200px; /*background:#FFFFFF;*/ 
+	position: relative; z-index: 999; float: center; top: 50%; margin: -193px auto 0;
+	box-shadow: 0px 7px 8px -1px rgba(0, 0, 0, 1); padding:10px;
+} 
+.alert_box .alert_box_close { position: absolute; right: 10px; top: 10px; padding:0; font-size: 11px; cursor: pointer; display: block; }
+.alert_box .alert_box_title { font-size: 14px;text-transform: uppercase;color: #000000;font-weight: bold;display:block;border-bottom: 1px solid #D9D9D9}
+.alert_box .alert_box_text { display: block;}
+.alert_box .alert_box_center {text-align: center;margin-top: 20px;}
+.alert_box .alert_box_but1{margin-right: 20px;}
+
+/*** Popup layer styles ***/
+.popup_layer { display: none; position: fixed; left: 0; top: 0; z-index: 997; width: 100%; height: 100%; }
+.popup_layer .transparent_layer { 
+	width: 100%; height: 100%; background: #000; 
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60); /* IE 5.5+*/
+	-moz-opacity: 0.6; 
+	-khtml-opacity: 0.6; 
+	opacity: 0.6;
+	position: absolute;
+	left: 0;
+	z-index: 998;
+}
+.popup_layer .popup_window { 
+	width: 360px; height: 370px; background: none; 
+	position: relative; z-index: 999; float: center; top: 50%; margin: -193px auto 0;
+	
+} 
+.popup_layer .popup_window .popup_close { position: absolute; right: 18px; top: 15px; padding: 1px 18px 4px 0; font-size: 11px; cursor: pointer; background: url( '/i/icons/ic_close.png' ) no-repeat right top; }
+.popup_layer .popup_window.added_width { width: 480px; height: 235px; display: none; }
+.popup_layer .popup_window.added_width.act { display: block; }
+.popup_layer .popup_window.call_width { width: 407px; height: 271px; }
+.popup_layer .popup_window.call_width.n_act { display: none; }
+.popup_layer iframe { border: 0; background-color: transparent; }

@@ -1,0 +1,13 @@
+<?if($_SESSION['iuser']['email']==''):?>
+	<script>
+		window.close();
+		opener.parent.hs.close();
+		opener.parent.location.href='/cabinet/';
+	</script>
+<?else:?>
+	<script>
+		window.close();
+		opener.parent.hs.close();
+		opener.parent.location.reload();
+	</script>
+<?endif?>

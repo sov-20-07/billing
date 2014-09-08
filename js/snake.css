@@ -1,0 +1,10 @@
+.field{height: 448px;margin: 0;width: 896px;}
+.area{position: relative;}
+.snake{width:64px;height:64px;background:#333333;position: absolute;background: url(/i/box.gif);}
+.go.snhead.right{background: url(/i/forklift_forward.gif);}
+.go.snhead.left{background: url(/i/forklift_back.gif);}
+.go.snhead.up{background: url(/i/forklift_up.gif);}
+.go.snhead.down{background: url(/i/forklift_down.gif);}
+.food{width:64px;height:64px;background: url(/i/box_appearence.gif);position: absolute;}
+.data{left:420px;top:50px;border:1px solid #333333;background:#FF0000;position: absolute;}
+.title{left:420px;top:10px;border:1px solid #333333;background:#FFFF00;position: absolute;}

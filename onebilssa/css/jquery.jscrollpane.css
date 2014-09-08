@@ -1,0 +1,236 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer{ position: relative; z-index: 1; overflow: hidden; max-width: 100%; }
+.jsScrollInner .jspContainer{ overflow: visible; }
+.jspPane{
+	position: absolute; z-index: -1;
+}
+
+.jspVerticalBar{ position: absolute; top: 0; right: 0; width: 7px; height: 100%; }
+.jspHorizontalBar{ position: absolute; bottom: 0; left: 0; width: 100%; height: 7px; }
+
+.jspVerticalBar *,
+.jspHorizontalBar *{ margin: 0; padding: 0; z-index: 3; }
+
+.jspCap{ display: none; }
+.jspHorizontalBar .jspCap{ float: left; }
+.jspTrack{ background: #ededed; position: relative; }
+.jspDrag{
+	background: #d4d4d4; position: relative; top: 0; left: 0; cursor: pointer;
+	
+	-ms-transition: top .1s ease-in-out, left .1s ease-in-out;
+	-moz-transition: top .1s ease-in-out, left .1s ease-in-out;
+    -o-transition: top .1s ease-in-out, left .1s ease-in-out;
+    -webkit-transition: top .1s ease-in-out, left .1s ease-in-out;
+    transition: top .1s ease-in-out, left .1s ease-in-out;
+}
+
+.jspDrag.jspActive{
+	-ms-transition: none;
+	-moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+}
+	.jspDrag.jspActive, .jspDrag:hover{ background: #ccc; }
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag{ float: left; height: 100%; }
+.jspArrow{ background: #50506d; text-indent: -20000px; display: block; cursor: pointer; }
+.jspArrow.jspDisabled{ cursor: default; background: #80808d; }
+.jspVerticalBar .jspArrow{ height: 16px; }
+.jspHorizontalBar .jspArrow{ width: 16px; float: left; height: 100%; }
+.jspVerticalBar .jspArrow:focus{ outline: none; }
+.jspCorner{ background: none; float: left; height: 100%; }
+
+/* in modules */
+.ltSidebar .jspTrack{ background: #333; position: relative; }
+.ltSidebar .jspDrag{ background: #444; position: relative; top: 0; left: 0; cursor: pointer; }
+.ltSidebar .jspScrollable{ width: 153px !important; }
+.ltSidebar .jspScrollable:before{
+	content: '';
+	display: block;
+	width: 95%; height: 5px;
+	position: absolute; top: 0; left: 0;
+	z-index: 2;
+}
+.ltSidebar .jspContainer{ width: 153px !important; }
+
+/* $scroll overflow */
+.grayOverflow.hasVerticalScroll .jspContainer:before{
+	content: '';
+	position: absolute; bottom: -65px; left: -20%;
+	display: block; width: 140%; height: 65px;
+	background: #ccc;
+	-moz-box-shadow:  0 -30px 30px #f6f6f6;
+	-webkit-box-shadow: 0 -30px 30px #f6f6f6;
+	box-shadow: 0 -30px 30px #f6f6f6;
+}
+
+.grayOverflow .jspCapTop{
+	display: block;
+	width: 7px; 
+	height: 10px;
+}
+
+/*.grayOverflow.hasVerticalScroll .jspContainer:after{
+	content: '';
+	z-index: -1;
+	position: absolute; left: -20%; top: -65px;
+	display: block; width: 140%; height: 65px;
+	background: #ccc;
+	-moz-box-shadow: 0 3px 3px #f6f6f6;
+	-webkit-box-shadow: 0 3px 3px #f6f6f6;
+	box-shadow: 0 3px 3px #f6f6f6;
+}*/
+
+.darkOverflow.hasVerticalScroll .jspContainer:before{
+	content: '';
+	position: absolute; bottom: -65px; left: -20%;
+	display: block; width: 140%; height: 65px;
+	background: #ccc;
+	-moz-box-shadow:  0 -15px 15px #282828;
+	-webkit-box-shadow: 0 -15px 15px #282828;
+	box-shadow: 0 -15px 15px #282828;
+}
+
+.darkOverflow.hasVerticalScroll .jspContainer:after{
+	content: '';
+	z-index: -1;
+	position: absolute; left: -20%; top: -65px;
+	display: block; width: 140%; height: 65px;
+	background: #ccc;
+	-moz-box-shadow: 0 3px 3px #282828;
+	-webkit-box-shadow: 0 3px 3px #282828;
+	box-shadow: 0 3px 3px #282828;
+}
+
+.darkOverflow .jspCapBottom{
+	display: block;
+	width: 7px; 
+	height: 1em;
+}
+
+.whiteOverflow.hasHorizontalScroll .jspContainer:after, .whiteOverflow.hasVerticalScroll.edit_container .jspContainer:after{
+	content: '';
+	z-index: 1;
+	position: absolute; top: -20%; right: -55px;
+	display: block; height: 140%; width: 65px;
+	background: #fff;
+	-moz-box-shadow: -15px 0px 15px #fff;	
+	-webkit-box-shadow: -15px 0px 15px #fff;	
+	box-shadow: -15px 0px 15px #fff;	
+}
+
+.whiteOverflow.hasVerticalScroll .jspContainer:before{
+	content: '';
+	z-index: 1;
+	position: absolute; left: -20%; bottom: -65px;
+	display: block; width: 140%; height: 65px;
+	background: #fff;
+	-moz-box-shadow: 0px -15px 15px #fff;	
+	-webkit-box-shadow: 0px -15px 15px #fff;	
+	box-shadow: 0px -15px 15px #fff;	
+}
+
+.edit_container .hasHorizontalScroll .jspContainer:before,
+.whiteOverflow.hasHorizontalScroll.edit_container .jspContainer:before{
+	bottom: -51px;
+}
+
+.sections_container .jspCapBottom{
+	display: block;
+	width: 7px; 
+	height: 17px;
+}
+
+.sections_container .jspCapTop{
+	display: block;
+	width: 7px; 
+	height: 34px;
+}
+
+.sections_container .jspCapLeft{
+	display: block;
+	width: 10px;
+	height: 7px;
+}
+
+.sections_container .jspCapRight{
+	display: block;
+	width: 3px;
+	height: 7px;
+}
+
+.edit_container .jspCapLeft{
+	display: block;
+	width: 10px;
+	height: 7px;
+}
+
+.edit_container .jspCapRight{
+	display: block;
+	width: 3px;
+	height: 7px;
+}
+
+.edit_container .jspHorizontalBar{ bottom: 7px; }
+.edit_container .jspHorizontalBar:after{
+	content: '';
+	display: block; position: absolute; bottom: -7px; left: 0;
+	widtH: 100%; height: 7px; background: #fff;
+}
+
+.features_table_layout .jspCapLeft{ width: 20px; }
+	
+.whiteOverflow.hasHorizontalScroll .jspCapRight{ width: 10px; }
+.whiteOverflow.hasVerticalScroll.hasHorizontalScroll .jspCapRight{ width: 3px; }
+
+.sections_container .jspVerticalBar, .edit_container .jspVerticalBar{ margin-right: 10px; }
+.sections_container .jspVerticalBar:after{
+	content: '';
+	width: 20px;
+	height: 100%;
+	display: block;
+	background: #fff;
+	position: absolute;
+	top: 0; right: -20px;
+}
+
+.beigeOverflow.hasVerticalScroll .jspContainer:before{
+	content: '';
+	z-index: 1;
+	position: absolute; left: -20%; bottom: -55px;
+	display: block; width: 140%; height: 65px;
+	background: #f6f6f6;
+	-moz-box-shadow: 0px -30px 30px #f6f6f6;	
+	-webkit-box-shadow: 0px -30px 30px #f6f6f6;	
+	box-shadow: 0px -30px 30px #f6f6f6;	
+}
+
+.popup_sections-settings .jspCapTop, .popup_sections-settings .jspCapBottom{
+	display: block;
+	width: 7px; 
+	height: 10px;	
+}
+
+.popup_sections-settings .jspVerticalBar{ margin-right: 8px; }
+.cell_order .jspVerticalBar{ margin-right: 10px; }
+
+.cell_order .grayOverflow .jspCapTop{ height: 9px; }
+
+.edit_container .jspCapTop{
+	display: block;
+	width: 7px; 
+	height: 10px;
+}
+.edit_container .jspCapBottom{
+	display: block;
+	width: 7px; 
+	height: 24px;
+}

@@ -1,0 +1,182 @@
+@charset "utf-8";
+/*
+	styles for select
+*/
+.cusel,
+.cuselFrameRight,
+.jScrollArrowUp,
+.jScrollArrowDown {
+	background: url("../i/cusel.png") no-repeat;
+}
+.cusel { /* общий вид селекта включая стрелку справа */
+	height: 22px;
+	background-position: left top;
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: Calibri, Arial, sans-serif;
+	color: #282828;
+	z-index: 1;
+}
+
+	.edit_container .cusel{ height: 35px; }
+	.edit_container .cusel,
+	.edit_container .cuselFrameRight,
+	.edit_container .jScrollArrowUp,
+	.edit_container .jScrollArrowDown {
+		background: url("../i/cusel2.png") no-repeat;
+	}
+
+.cuselFrameRight { /* левая чсть селект. обыно скругление и левая граница */
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 19px;
+	background-position: right top;
+}
+
+	.edit_container .cuselFrameRight{ width: 30px; background-position: right top; } 
+
+.cusel:hover .cuselFrameRight{ background-position: right -25px; }
+	.edit_container .cusel:hover .cuselFrameRight{ background-position: right -38px; }
+
+.cuselText { /* контейнер для отображенного текста селект */
+	height: 20px; line-height: 18px;
+	padding: 2px 0 0 6px; /* подбираем отступы и высоту для видимого текста в селекте */
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+	.edit_container .cuselText{ height: 30px; line-height: 30px; padding-left: 11px; }
+* html .cuselText { /* высота блока для текста для ие6 */
+	height: 22px;
+}
+.cusel span { /* оформление оптиона */
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 2px 6px 2px 6px; /* паддинг справа - это отступ текста от ползунка */
+	margin-right: -8px;
+	zoom: 1; line-height: 20px;
+}
+	.edit_container .cusel span{ padding: 5px 11px 5px 11px;  }
+.cusel span:hover,
+.cusel .cuselOptHover { /* реакция оптиона на наведение */
+	background: #f0f2ef;
+}
+.cusel span[disabled], .cusel span[disabled], .cusel .cuselOptHover[disabled]{
+	cursor: default;
+	background: none;
+	color: #999;
+}
+.cusel .cuselActive { /* оформление активного оптиона в списке */
+	background: #f0f2ef;
+}
+
+/*
+	styles for focus and hover
+*/
+.cusel:hover,
+.cusel:hover .cuselFrameRight,
+.cusel:focus,
+.cusel:focus .cuselFrameRight,
+.cuselFocus,
+.cuselFocus .cuselFrameRight { background-image: url("../i/cusel.png"); }
+.cuselOpen { z-index: 999; }
+
+	.edit_container .cusel:hover,
+	.edit_container .cusel:hover .cuselFrameRight,
+	.edit_container .cusel:focus,
+	.edit_container .cusel:focus .cuselFrameRight,
+	.edit_container .cuselFocus,
+	.edit_container .cuselFocus .cuselFrameRight { background-image: url("../i/cusel2.png"); }
+	
+.cuselFocus, .cusel:focus{
+	-moz-box-shadow: 0 0 3px #dde0d3;
+	-webkit-box-shadow: 0 0 3px #dde0d3;
+	box-shadow: 0 0 3px #dde0d3;
+}
+
+/*
+	styles for disabled select
+*/
+.classDisCusel,
+.classDisCusel .cuselFrameRight {
+	background-image: url("../i/cusel.png") !important;
+	cursor: default;
+	color: #ccc;
+}
+
+
+	.edit_container .classDisCusel,
+	.edit_container .classDisCusel .cuselFrameRight {
+		background-image: url("../i/cusel.png") !important;
+		cursor: default;
+		color: #ccc;
+	}
+
+.classDisCusel .cuselText {
+	cursor: default;
+}
+
+/*
+	styles for scrollbar
+*/
+.cusel-scroll-wrap { /* контейнер для блока с прокруткой */
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #fff; /* фон выпадающего списка */
+	min-width: 100%;
+	width: auto;
+}
+.jScrollPaneContainer {
+	cursor: default;
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	border: 1px solid #dde0d3;
+	/* границы выпадающего спиcка */
+	margin: -1px 0;
+}
+
+.jScrollPaneTrack { /* трек для ползунка прокрутки */
+	height: 100%;
+	width: 7px !important;
+	background: #ededed;
+	position: absolute;
+	top: 0;
+	right: 0px;
+}
+.jScrollPaneDrag { /* ползунок */
+	position: absolute;
+	cursor: pointer;
+	width: 7px !important;
+	min-height: 30px;
+	right: 0;
+	
+	background: #d4d4d4;
+}
+
+.jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.jScrollArrowUp,
+.jScrollArrowDown { width: 7px; height: 0px; visibility: hidden; }

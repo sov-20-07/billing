@@ -1,0 +1,1 @@
+<?FeaturesWidget::set(array('num'=>$_POST['num']))?>

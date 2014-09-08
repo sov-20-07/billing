@@ -1,0 +1,46 @@
+<?
+class ForumController extends Site{
+	function __construct(){
+		if($_GET['act']=='del'){
+			Forum::del();
+			$this->redirect('/'.implode('/',Funcs::$uri).'/');
+		}
+		if(Funcs::$uri[2]==''){
+			$tree=Tree::getTreeByUrl('wide',array('help','forum'));
+			Funcs::setMeta($tree);
+			$tree['list']=Forum::getForum();
+			View::render('forum/forum',$tree);
+		}elseif(Funcs::$uri[3]==''){
+			if($_POST){
+				$error=Forum::add();
+				if($error){
+					$tree=Forum::getItems();
+					Funcs::setMeta($tree);
+					View::render('forum/items',$tree);
+				}else{
+					$this->redirect('/'.Funcs::$uri[0].'/'.Funcs::$uri[1].'/'.Funcs::$uri[2].'/');
+				}
+			}else{
+				$tree=Forum::getItems();
+				Funcs::setMeta($tree);
+				View::render('forum/items',$tree);
+			}
+		}else{
+			if($_POST){
+				$error=Forum::add();
+				if($error){
+					$tree=Forum::getList();
+					Funcs::setMeta($tree);
+					View::render('forum/list',$tree);
+				}else{
+					$this->redirect('/'.Funcs::$uri[0].'/'.Funcs::$uri[1].'/'.Funcs::$uri[2].'/'.Funcs::$uri[3].'/');
+				}
+			}else{
+				$tree=Forum::getList();
+				Funcs::setMeta($tree);
+				View::render('forum/list',$tree);
+			}
+		}
+	}
+}
+?>

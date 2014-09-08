@@ -1,0 +1,1 @@
+<a href="javascript:;" onclick="switchs($(this),'<?=$tab?>','<?=$field?>',<?=$id?>)"><?if($value=='1'):?>Да<?else:?>Нет<?endif?></a>

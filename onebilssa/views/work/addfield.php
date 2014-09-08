@@ -1,0 +1,1 @@
+<?FieldWidget::run(array('type'=>$_POST['type']))?>

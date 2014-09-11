@@ -27,7 +27,7 @@ AddType application/vnd.openxmlformats-officedocument.spreadsheetml.sheet xlsx
 AddType application/vnd.ms-excel.template.macroEnabled.12 xltm
 AddType application/vnd.openxmlformats-officedocument.spreadsheetml.template xltx
 
-
+#1
 DirectoryIndex index.php index.html
 
 AddDefaultCharset utf-8
